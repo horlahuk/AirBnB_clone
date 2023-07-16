@@ -29,7 +29,7 @@ class FileStorage():
     def save(self):
         """Serializes __objects to the JSON file"""
         with open(self.__file_path, "w", encoding="utf-8") as file:
-            data = {key : value.to_dict() for key, value in self.__objects.items()}
+            data = {key: value.to_dict() for key, value in self.__objects.items()}
             json.dump(data, file)
 
     def reload(self):
@@ -40,8 +40,6 @@ class FileStorage():
                 for obj in obj_data.values():
                     cls_name = obj["__class__"]
                     del obj["__class__"]
-
-                    #cls = getattr(base_model, cls_name)
                     self.new(eval(f"{cls_name}")(**obj))
         except FileNotFoundError:
             return

@@ -84,7 +84,7 @@ class HBNBCommand(cmd.Cmd):
             or not on the class name
         """
         arg = args.split()
-        
+
         if len(arg) == 0:
             print([str(value) for value in storage.all().values()])
 
@@ -95,6 +95,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, args):
         pass
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
