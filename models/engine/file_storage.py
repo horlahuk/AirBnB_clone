@@ -4,7 +4,8 @@
     JSON file to instances
 """
 import json
-from models import base_model
+from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage():
@@ -34,7 +35,8 @@ class FileStorage():
                 for obj in obj_data.values():
                     cls_name = obj["__class__"]
                     del obj["__class__"]
-                    cls = getattr(base_model, cls_name)
-                    self.new(cls(**obj))
+
+                    #cls = getattr(base_model, cls_name)
+                    self.new(eval(f"{cls_name}")(**obj))
         except FileNotFoundError:
             return
