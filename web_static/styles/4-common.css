@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    display: grid;
+    flex-direction: column;
+}
+
+.container {
+    margin: 30px auto;
+    width: clamp(600px, 90vw + .5rem, 1000px);
+}
