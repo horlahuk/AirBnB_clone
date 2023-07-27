@@ -1,10 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    color: #484848;
-    font-size: 14px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    border: none;
+:root {
+    /* color variables */
+    --borderColor: #DDDDDD;
+    --btnRed: #FF5A5F;
+    --btnTxt: #FFFFFF;
+    --dropdownBg: #FAFAFA;
 }
 
 .container .filters {
@@ -12,14 +11,14 @@
     align-items: center;
     height: 70px;
     width: 100%;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--borderColor);
     border-radius: 4px;
 }
 
 .filters > button {
     font-size: 18px;
-    background-color: #FF5A5F;
-    color: #FFFFFF;
+    background-color: var(--btnRed);
+    color: var(--btnTxt);
     height: 48px;
     width: 20%;
     border-radius: 4px;
@@ -40,12 +39,13 @@
     justify-content: center;
 }
 
+
 .locations {
-    border-right: 1px solid #DDDDDD;
+    border-right: 1px solid var(--borderColor);
 }
 
 .amenities > h3, .locations > h3 {
-    font-weight: 600;
+    font-weight: 600; 
 }
 
 .amenities > h4, .locations > h4 {
@@ -62,8 +62,8 @@
     position: absolute;
     top: 100%;
     width: 100%;
-    background-color: #FAFAFA;
-    border: 1px  solid #DDDDDD;
+    background-color: var(--dropdownBg);
+    border: 1px solid var(--borderColor);
     border-radius: 4px;
     padding: 1.5rem;
 }

@@ -1,5 +1,13 @@
+:root {
+    /* color variables */
+    --borderColor: #DDDDDD;
+    --lightRed: #FF5A5F;
+    --btnTxt: #FFFFFF;
+    --dropdownBg: #FAFAFA;
+}
+
 .places > h1 {
-    font-size: 30px;
+    font-size: 30px; 
     margin-top: 20px;
 }
 
@@ -9,7 +17,7 @@
     width: 390px;
     padding: 20px;
     margin: 20px;
-    border: 1px solid #FF5A5F;
+    border: 1px solid var(--lightRed); 
     border-radius: 4px;
 }
 
